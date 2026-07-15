@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="../css/finalstyle.css">
+</head>
+<body>
+    <div id="scroll-progress"></div>
+    <div class="grid-background"></div>
+    
+    <header>
+        <h1> Meet Osbaldo Mota</h1>
+        <nav>
+            <a href="indexFinalProject.html" class="active">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="projects.html">Projects</a>
+            <a href="resume.html">Resume</a>
+            <a href="contact.html">Contact</a>  
+        </nav>
+</header>
+
+<main>
+    <section id="hero" class="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-text">
+    <h2>  I'm passionate about innovation and driven to make a difference</h2>
+    <h3>
+<span id="typing-text"></span>
+<span class="cursor">|</span>
+</h3>
+
+    <p>I am an aspiring web developer with a strong foundation in HTML, CSS, and JavaScript. I love creating responsive and user-friendly websites that provide an excellent user experience.
+        I inspire to be a full stack developer and am currently learning React and Node.js to expand my skill set. I am passionate about innovation and driven to make a difference in the tech industry. 
+        I am excited to continue growing as a developer and contributing to meaningful projects that have a positive impact on users.
+    </p>
+
+    <div class ="hero-buttons">
+        <a href="projects.html" class="cta-button">View Projects</a>
+        <a href="resume.html" class="cta-button">View Resume</a>
+    </div>
+    </div>
+    <div class="hero-image">
+        <img src="../images/profile/profile.png" alt="My Profile Picture">
+        <div class="profile-caption">
+            <h4>That's me!</h4>
+            <p>Feel free to explore my work as I continue to develop my skills and create innovative solutions. </p>
+        </div>
+    </div>
+    
+    </section>
+
+
+    <section id="skills" class="skills-section">
+
+<h2>Technical Skills</h2> 
+
+<div class="skills-container">
+
+<div class="skill-box">
+<img src="../images/skills/html5.svg" alt="HTML">
+<p>HTML</p>
+</div>
+
+<div class="skill-box">
+<img src="../images/skills/css.svg" alt="CSS">
+<p>CSS</p>
+</div>
+
+<div class="skill-box">
+<img src="../images/skills/javascript.svg" alt="JavaScript">
+<p>JavaScript</p>
+</div>
+
+<div class="skill-box">
+<img src="../images/skills/python.svg" alt="Python">
+<p>Python</p>
+</div>
+<div class="skill-box">
+<img src="../images/skills/java.png" alt="Java">
+<p>Java</p>
+</div>
+
+<div class="skill-box">
+<img src="../images/skills/react.svg" alt="React">
+<p>React</p>
+</div>
+
+<div class="skill-box">
+<img src="../images/skills/nodedotjs.svg" alt="Node.js">
+<p>Node.js</p>
+</div>
+
+<div class="skill-box">
+<img src="../images/skills/git.svg" alt="Git">
+<p>Git</p>
+</div>
+
+<div class="skill-box">
+<img src="../images/skills/github.svg" alt="GitHub">
+<p>GitHub</p>
+</div>  
+
+<div class="skill-box">
+<img src="../images/skills/typescript.svg" alt="TypeScript">
+<p>TypeScript</p>
+
+</div>
+
+
+</section>
+
+    <section class="home-project">
+
+<h2>Featured Project</h2>
+
+<div class="featured-project-card">
+
+<img src="../images/projects/breadTracker.png" alt="Bread Tracker">
+
+<div class="featured-text">
+
+<h3>Bread Tracker App</h3>
+
+<p>
+A full-stack subscription tracking app built with React and Node.js that helps users manage recurring payments.
+</p> <br>
+
+<a href="projects.html" class="project-link">View All Projects</a>
+
+</div>
+
+</div>
+
+</section>
+</main>
+
+<footer>
+
+<div class="footer-container">
+
+<h3 class="footer-logo">Osbaldo Mota</h3>
+
+<nav class="footer-nav">
+
+<a href="indexFinalProject.html">Home</a>
+<a href="about.html">About</a>
+<a href="projects.html">Projects</a>
+<a href="resume.html">Resume</a>
+<a href="contact.html">Contact</a>
+
+</nav>
+
+<div class="footer-social">
+
+<a href="https://github.com/ozzieBoss" target="_blank">GitHub</a>
+
+<a href="https://linkedin.com/in/YOURPROFILE" target="_blank">LinkedIn</a>
+
+<a href="mailto:ozzieboss20@gmail.com">Email</a>
+
+</div>
+
+<p class="footer-copy">
+© 2026 Osbaldo Mota
+</p>
+
+</div>
+
+</footer>
+
+<!-- 
+JavaScript used here for the Dynamic typing used on the home page, cycles between "Aspiring Full Stack Developer",
+"Frontend Developer",
+"React Developer",
+"JavaScript Enthusiast"
+I used AI and Google to figure out this feature if that is okay
+-->
+<script>
+
+const roles = [
+"Aspiring Full Stack Developer",
+"Frontend Developer",
+"React Developer",
+"JavaScript Enthusiast"
+];
+
+let roleIndex = 0;
+let charIndex = 0;
+let typingText = document.getElementById("typing-text");
+let typingSpeed = 80;
+
+function typeRole(){
+
+if(charIndex < roles[roleIndex].length){
+
+typingText.textContent += roles[roleIndex].charAt(charIndex);
+charIndex++;
+
+setTimeout(typeRole, typingSpeed);
+
+}
+else{
+
+setTimeout(eraseRole, 1500);
+
+}
+
+}
+
+function eraseRole(){
+
+if(charIndex > 0){
+
+typingText.textContent = roles[roleIndex].substring(0, charIndex - 1);
+charIndex--;
+
+setTimeout(eraseRole, 40);
+
+}
+else{
+
+roleIndex++;
+
+if(roleIndex >= roles.length){
+roleIndex = 0;
+}
+
+setTimeout(typeRole, 300);
+
+}
+
+}
+
+document.addEventListener("DOMContentLoaded", function(){
+
+if(roles.length){
+setTimeout(typeRole, 500);
+}
+
+});
+
+</script>
+
+
+<!-- JavaScript used here for dynamic purple bar on the top of the screen for scroll progress -->
+
+<script>
+
+window.onscroll = function(){
+
+let scrollTop = document.documentElement.scrollTop;
+let scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+let scrolled = (scrollTop / scrollHeight) * 100;
+
+document.getElementById("scroll-progress").style.width = scrolled + "%";
+
+};
+
+</script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects | Osbaldo Mota Portfolio</title>
+<link rel="stylesheet" href="../css/finalstyle.css">
+</head>
+
+<body>
+    <div id="scroll-progress"></div>
+<div class="grid-background"></div>
+
+<header>
+<h1>Osbaldo Mota</h1>
+<nav>
+<a href="indexFinalProject.html">Home</a>
+<a href="about.html">About Me</a>
+<a href="projects.html" class="active">Projects</a>
+<a href="resume.html">Resume</a>
+<a href="contact.html">Contact</a>
+
+</nav>
+</header>
+
+<main>
+
+<section id="projects" class="projects">
+
+    
+
+<h2>Recent Projects</h2>
+
+
+
+
+<div class="projects-grid">
+
+<div class="project-card">
+<span class="featured">Featured Project</span>
+
+<img src="../images/projects/breadTracker.png" alt="Bread Tracker App">
+
+<h3>Bread Tracker App</h3>
+
+<p>
+A full-stack web application that allows users to track their subscriptions, manage their accounts, and receive notifications about upcoming payments.
+</p>
+
+<p class="tech">Made with: • HTML • CSS • JavaScript • React • Node.js</p>
+
+<a href="#" class="project-link" target="_blank">View Project</a>
+
+</div>
+
+
+<div class="project-card">
+
+<img src="../images/projects/pizza-project.png" alt="Pizza Order App">
+
+<h3>Pizza Order App</h3>
+
+<p>
+A JavaScript application that calculates pizza orders with toppings,
+delivery options, and sales tax.
+</p>
+
+<p class="tech">HTML • CSS • JavaScript</p>
+
+<a href="a8.html" class="project-link" target="_blank">View Project</a>
+
+</div>
+
+
+<div class="project-card">
+
+<img src="../images/projects/yugioh-card.png" alt="CSS Trading Card">
+
+<h3>CSS Trading Card</h3>
+
+<p>
+A styled trading card built using HTML and CSS to recreate
+a Yu-Gi-Oh inspired layout.
+</p>
+
+<p class="tech">HTML • CSS</p>
+
+<a href="a5.html" class="project-link" target="_blank">View Project</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="footer-container">
+
+<h3 class="footer-logo">Osbaldo Mota</h3>
+
+<nav class="footer-nav">
+
+<a href="indexFinalProject.html">Home</a>
+<a href="about.html">About</a>
+<a href="projects.html">Projects</a>
+<a href="resume.html">Resume</a>
+<a href="contact.html">Contact</a>
+
+</nav>
+
+<div class="footer-social">
+
+<a href="https://github.com/ozzieBoss" target="_blank">GitHub</a>
+
+<a href="https://linkedin.com/in/YOURPROFILE" target="_blank">LinkedIn</a>
+
+<a href="mailto:ozzieboss20@gmail.com">Email</a>
+
+</div>
+
+<p class="footer-copy">
+© 2026 Osbaldo Mota
+</p>
+
+</div>
+
+</footer>
+<!-- JavaScript used here for dynamic purple bar on the top of the screen for scroll progress -->
+<script>
+
+window.onscroll = function(){
+
+let scrollTop = document.documentElement.scrollTop;
+let scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+let scrolled = (scrollTop / scrollHeight) * 100;
+
+document.getElementById("scroll-progress").style.width = scrolled + "%";
+
+};
+
+</script>
+</body>
+</html>
