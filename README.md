@@ -11,7 +11,7 @@
 
 Welcome to my personal portfolio website! This project showcases my technical skills, projects, and professional background as I pursue opportunities in software engineering and full-stack web development.
 
-🔗 **Live Website:** *https://ozzieboss.github.io/OsbaldoPersonalProfiloWebsite/*
+🔗 **Live Website:** *https://ozzieboss.github.io/ozzieBoss*
 
 ---
 
